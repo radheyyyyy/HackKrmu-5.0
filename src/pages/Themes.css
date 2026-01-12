@@ -1,0 +1,177 @@
+.hero-title {
+    color: white;
+    font-weight: 800;
+    font-size: 6rem;
+    font-family: 'TransformersMovie', sans-serif;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    letter-spacing: -0.025em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+/* ================= THEMES HEADING ================= */
+
+.themes-heading {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+/* Ghost background text */
+.themes-ghost {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-display: block;
+
+    font-family: 'TransformersMovie', sans-serif;
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.1);
+    filter: blur(1px);
+
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+
+    animation: ghostFloatThemes 20s ease-in-out infinite;
+}
+
+/* Foreground THEMES title */
+.themes-main-title {
+    position: relative;
+    z-index: 2;
+}
+
+/* 🎈 SAFE FLOAT (Y ONLY) */
+@keyframes ghostFloatThemesY {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+
+/* ============================= */
+/* THEMES PAGE */
+/* ============================= */
+
+.themes-page {
+    width: 100%;
+    padding: 0px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -50px;
+    margin-top: -30px;
+}
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.theme-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: -100px;
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.theme-card {
+    width: 320px;
+    height: 180px;
+    position: relative;
+    border: 1.5px solid rgba(0, 255, 247, 0.45);
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow:
+        0 0 18px rgb(255, 255, 255),
+        inset 0 0 14px rgba(255, 255, 255, 0.674);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+/* ============================= */
+/* FACES */
+/* ============================= */
+
+.theme-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+/* FRONT */
+.theme-face.front {
+    gap: 12px;
+    color: #00fff7;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.theme-face.front h3 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+/* BACK (IMAGE) */
+.theme-face.back {
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.08);
+}
+
+/* ============================= */
+/* HOVER EFFECT (SAFE FLIP) */
+/* ============================= */
+
+.theme-card:hover {
+    transform: rotateX(8deg) rotateZ(-1deg);
+    box-shadow:
+        0 0 35px rgb(255, 255, 255),
+        0 0 80px rgba(255, 255, 255, 0.621);
+}
+
+.theme-card:hover .theme-face.front {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.theme-card:hover .theme-face.back {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+

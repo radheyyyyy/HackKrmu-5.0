@@ -1,0 +1,125 @@
+/* ================================================= */
+/* SECTION DIVIDER – MOVING TEXT (FIXED) */
+/* ================================================= */
+
+:root {
+    --neon: #00fff7;
+    --neon-glow: rgba(0, 255, 247, 0.9);
+}
+
+/* ================= WRAPPER ================= */
+
+.divider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 48px;                 /* 🔥 Enough height to avoid clipping */
+    margin: 40px 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    /* Soft edge mask (prevents hard cut) */
+    mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+}
+
+/* ================= LINE ================= */
+
+.divider-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 3px;
+    transform: translate(-50%, -50%);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--neon),
+        transparent
+    );
+
+    box-shadow: 0 0 14px var(--neon-glow);
+    opacity: 0.85;
+
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* ================= MOVING TEXT ================= */
+
+.divider-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+
+    width: 200%;
+    white-space: nowrap;
+
+    animation: scrollText 24s linear infinite;
+    will-change: transform;
+}
+
+.divider-text span {
+    display: inline-flex;
+    align-items: center;
+
+    font-family: 'transformersmovie' sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    color: white;
+    font-weight: 500;
+
+    padding-right: 48px;
+
+    text-shadow:
+        0 0 6px rgb(255, 255, 255),
+        0 0 14px rgb(255, 255, 255);
+
+    opacity: 0.9;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.55;
+        box-shadow: 0 0 8px rgba(0, 255, 247, 0.5);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 18px rgba(0, 255, 247, 0.9);
+    }
+    100% {
+        opacity: 0.55;
+        box-shadow: 0 0 8px rgba(0, 255, 247, 0.5);
+    }
+}
+
+/* ================= MOBILE SAFETY ================= */
+
+@media (max-width: 768px) {
+    .divider-wrapper {
+        height: 40px;
+        margin: 28px 0;
+    }
+
+    .divider-text span {
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+    }
+}

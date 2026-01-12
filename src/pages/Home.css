@@ -1,0 +1,424 @@
+/* ================================================= */
+/* FULL-PAGE SECTION BASE (ALL SECTIONS) */
+/* ================================================= */
+
+.page-section {
+    min-height: calc(100vh - var(--navbar-height));
+    width: 100%;
+
+    padding: 60px 10% 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    text-align: center;
+    /* gap: 16px; */
+
+    /* Scroll snap FIX for fixed navbar */
+    scroll-snap-align: start;
+    scroll-margin-top: var(--navbar-height);
+
+    /* Reveal animation */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.page-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================================================= */
+/* HOME / HERO SECTION */
+/* ================================================= */
+
+.home {
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(1px);
+}
+
+/* ================================================= */
+/* HERO TITLE WRAPPER */
+/* ================================================= */
+
+.hero-title {
+    color: white;
+    font-weight: 800;
+    font-size: 6rem;
+    font-family: 'TransformersMovie', sans-serif;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    /* letter-spacing: -0.025em; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+/* ================================================= */
+/* HERO TAGLINE */
+/* ================================================= */
+
+.tagline {
+    color: #ccc;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+/* ================================================= */
+/* GLOBAL TEXT POLISH */
+/* ================================================= */
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+}
+
+/* ================================================= */
+/* PRIZE POOL SECTION (INSIDE HOME PAGE) */
+/* ================================================= */
+
+.prizes {
+    gap: 24px;
+}
+
+/* Prize total */
+.prize-total {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+/* Prize cards grid */
+.prize-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 32px;
+    margin: 40px 0;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Base card */
+.prize-card {
+    padding: 32px 20px;
+    border-radius: 14px;
+    background: rgba(10, 10, 10, 0.65);
+    backdrop-filter: blur(10px);
+    text-align: center;
+
+    border: 2px solid transparent;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.prize-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.prize-card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.prize-card:hover {
+    transform: translateY(-12px) scale(1.03);
+}
+
+/* ================================================= */
+/* GOLD / SILVER / BRONZE */
+/* ================================================= */
+
+.prize-card.gold {
+    border-color: #ffd700;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+}
+
+.prize-card.gold p {
+    color: #ffd700;
+}
+
+.prize-card.gold:hover {
+    box-shadow: 0 0 45px rgba(255, 215, 0, 0.6);
+}
+
+.prize-card.silver {
+    border-color: #9fe7ff;
+    box-shadow: 0 0 25px rgba(159, 231, 255, 0.25);
+}
+
+.prize-card.silver p {
+    color: #9fe7ff;
+}
+
+.prize-card.silver:hover {
+    box-shadow: 0 0 45px rgba(159, 231, 255, 0.6);
+}
+
+.prize-card.bronze {
+    border-color: #ff9f43;
+    box-shadow: 0 0 25px rgba(255, 159, 67, 0.25);
+}
+
+.prize-card.bronze p {
+    color: #ff9f43;
+}
+
+.prize-card.bronze:hover {
+    box-shadow: 0 0 45px rgba(255, 159, 67, 0.6);
+}
+
+/* ================================================= */
+/* PRIZE NOTE */
+/* ================================================= */
+
+.prize-note {
+    color: #ccc;
+    margin-top: 10px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.register-btn {
+    padding: 16px 42px;
+    font-size: 2.3rem;
+    font-family: 'transformersmovie', sans-serif;
+    letter-spacing: 2px;
+
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.6);
+
+    transition: all 0.3s ease;
+
+    margin-left: -10px;
+}
+
+.register-btn:hover {
+    background: #ffffff;
+    color: black;
+    text-shadow: none !important;
+    box-shadow:
+        0 0 30px rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+
+.tagline-below {
+    margin-top: 90px;
+    margin-bottom: -70px;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    text-shadow:
+        0 0 8px rgba(0, 255, 247, 0.35),
+        0 0 16px rgba(0, 255, 247, 0.25);
+
+    opacity: 0.85;
+}
+
+
+/* ============================= */
+/* KRMU BANNER – STABLE & DECENT */
+/* ============================= */
+
+/* .krmu-banner {
+    max-width: 90%;
+    height: auto;
+    margin-top: 32px;
+    margin-bottom: 28px;
+    display: block;
+} */
+
+/* Center wrapper (recommended) */
+/* .home .banner-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} */
+
+/* =============================== */
+/* TIMELINE SECTION OVERRIDE */
+/* =============================== */
+
+.timeline-section {
+    align-items: stretch !important;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================= HERO CTA WRAPPER ================= */
+
+.hero-cta {
+    margin-top: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    /* vertical alignment */
+    justify-content: center;
+
+    gap: 24px;
+
+    /* slight left bias for register */
+    transform: translateX(-28px);
+
+    white-space: nowrap;
+    /* 🔥 prevents wrap */
+}
+
+/* ================= REGISTER BUTTON ================= */
+
+.register-btn {
+    padding: 15px 45px;
+    font-size: 2.2rem;
+    font-family: 'TransformersMovie', sans-serif;
+    letter-spacing: 2px;
+
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.6);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.register-btn:hover {
+    background: #ffffff;
+    color: #000;
+    box-shadow:
+        0 0 32px rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+}
+
+.register-btn:active {
+    transform: scale(0.96);
+}
+
+/* ================= INSTAGRAM BUTTON (RIGHT) ================= */
+
+.insta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+
+    margin-left: 50px;
+
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+
+    background: transparent;
+
+    box-shadow:
+        0 0 16px rgba(255, 255, 255, 0.6),
+        inset 0 0 10px rgba(255, 255, 255, 0.25);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insta-btn img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: invert(1);
+    /* makes black icon white */
+}
+
+.insta-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+        0 0 28px rgba(255, 255, 255, 0.9),
+        inset 0 0 14px rgba(255, 255, 255, 0.35);
+}
+
+.insta-btn:active {
+    transform: scale(0.95);
+}
+
+/* ============================= */
+/* FULL PAGE SHIMMER BACKGROUND */
+/* ============================= */
+
+.shimmer-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.12),
+        transparent 70%
+    );
+
+    animation: shimmerScan 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.home > * {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes shimmerScan {
+    0% { transform: translateX(-120%); }
+    60% { transform: translateX(120%); }
+    100% { transform: translateX(120%); }
+}
+
+/* Disable shimmer on mobile (recommended) */
+@media (max-width: 768px) {
+    .shimmer-bg::after {
+        display: none;
+    }
+}
+
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+

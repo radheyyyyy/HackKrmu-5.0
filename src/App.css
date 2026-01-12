@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "TransformersMovie";
+  src: url("./assets/fonts/TransformersMovie-y9Ad.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ================================================= */
+/* GLOBAL HTML SETTINGS */
+/* ================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================================================= */
+/* GLOBAL COLOR VARIABLES (NEON CYBER THEME) */
+/* ================================================= */
+
+:root {
+  --neon-cyan: #00fff7;
+  --neon-purple: #b400ff;
+
+  --neon-soft: rgba(0, 255, 247, 0.4);
+  --neon-glow: rgba(0, 255, 247, 0.8);
+
+  --purple-soft: rgba(180, 0, 255, 0.4);
+  --purple-glow: rgba(180, 0, 255, 0.8);
+
+  --bg-black: #000000;
+  --navbar-height: 70px;
+}
+
+/* ================================================= */
+/* GLOBAL BODY STYLING (PURE BLACK – STABLE) */
+/* ================================================= */
+
+body {
+  margin: 0;
+  padding-top: var(--navbar-height);
+  color: white;
+
+  /* IMPORTANT: Hack KRMU font */
+  font-family: 'Orbitron', monospace;
+
+  overflow-x: hidden;
+
+  /* PURE BLACK BACKGROUND */
+  background: var(--bg-black);
+
+  /* No animations, no flicker */
+  animation: none;
+}
+
+/* ================================================= */
+/* REMOVE ALL OVERLAY / NOISE EFFECTS */
+/* ================================================= */
+
+body::before,
+body::after {
+  display: none;
+}
+
+/* ================================================= */
+/* BACKGROUND LAYERING SYSTEM */
+/* ================================================= */
+
+/* Disable parallax / ambient layers */
+.parallax {
+  display: none;
+}
+
+/* Main content always above background */
+.page-section,
+.navbar {
+  position: relative;
+  z-index: 3;
+}
+
+/* ================================================= */
+/* APP CONTAINER (FROM App.js) */
+/* ================================================= */
+
+.app-container {
+  position: relative;
+  z-index: 3;
+  overflow-x: hidden;
+}
+
+/* ================================================= */
+/* NAVBAR (FIXED, CLEAN, SAFE Z-INDEX) */
+/* ================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--navbar-height);
+  width: 100%;
+
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  z-index: 100;
+}
+
+/* ================================================= */
+/* NEON TEXT GLOW (TEXT ONLY) */
+/* ================================================= */
+
+h1,
+h2,
+h3,
+.logo,
+.cta {
+  color: white;
+  text-shadow:
+    0 0 6px var(--neon-soft),
+    0 0 12px var(--neon-glow);
+}
+
+/* Purple glow for section titles */
+.section-title {
+  text-shadow:
+    0 0 8px var(--purple-soft),
+    0 0 16px var(--purple-glow);
+}
+
+/* ================================================= */
+/* PAGE SECTIONS BASE */
+/* ================================================= */
+
+.page-section {
+  min-height: calc(100vh - var(--navbar-height));
+  width: 100%;
+  padding: 60px 10% 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* ================================================= */
+/* BUTTONS (NEON CTA STYLE) */
+/* ================================================= */
+
+button,
+.cta {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.cta:hover {
+  background: var(--neon-cyan);
+  color: black;
+  box-shadow:
+    0 0 12px var(--neon-glow),
+    0 0 24px var(--neon-glow);
+}
+
+/* ================================================= */
+/* LINKS */
+/* ================================================= */
+
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 10px var(--neon-glow);
+}
+
+/* ================================================= */
+/* TEXT SELECTION */
+/* ================================================= */
+
+::selection {
+  background: var(--neon-purple);
+  color: white;
+}
+
+html, body {
+  max-width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+

@@ -1,0 +1,346 @@
+/* ============================= */
+/* TEAM SECTION */
+/* ============================= */
+
+.team-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.role-heading {
+    margin-top: 70px !important;
+    margin-bottom: 80px;
+
+    font-family: "TransformersMovie" sans-serif;
+    font-size: 3rem !important;
+    font-weight: 600;
+    font-style: normal;
+    color: #ffffff;
+    text-shadow: none !important;
+
+}
+
+.role-heading2 {
+    margin-top: 90px;
+    margin-bottom: 85px;
+
+    font-family: "TransformersMovie" sans-serif;
+    font-size: 3rem !important;
+    font-weight: 600;
+    font-style: normal;
+    color: #ffffff;
+    text-shadow: none !important;
+}
+
+/* ================= TEAM HEADING ================= */
+
+.team-heading-wrapper {
+    position: relative;
+    text-align: center;
+    margin-bottom: 120px;
+    margin-top: -80px;
+}
+
+/* Ghost text */
+.team-ghost {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-display: block;
+
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, 0.10);
+    filter: blur(1px);
+
+    font-family: 'TransformersMovie', sans-serif;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+
+    animation: ghostFloat 20s ease-in-out infinite;
+}
+
+/* Foreground title */
+.team-main-title {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ============================= */
+/* GRIDS */
+/* ============================= */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+    justify-items: center;
+}
+
+.team-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+    justify-items: center;
+    margin-bottom: -120PX;
+}
+
+/* ============================= */
+/* GOLD JUDGE CARD */
+/* ============================= */
+
+.team-card {
+    width: 300px;
+    padding: 42px 26px 36px;
+    position: relative;
+    text-align: center;
+
+    background: linear-gradient(
+    145deg,
+    #111111,
+    #0b0b0b
+    );
+
+    border-radius: 26px;
+
+    box-shadow:
+    0 0 14px rgba(255, 215, 130, 0.15),
+    inset 0 0 10px rgba(255, 215, 130, 0.08);
+
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* OUTER GOLD BORDER */
+.team-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 28px;
+    border: 1px solid rgba(230, 199, 123, 0.2);
+    pointer-events: none;
+}
+
+/* HOVER */
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 0 22px rgba(255, 215, 130, 0.25),
+        inset 0 0 14px rgba(255, 215, 130, 0.15);
+}
+
+/* ============================= */
+/* CORNER HUD MARKS */
+/* ============================= */
+
+.team-card::after {
+    content: "";
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    width: 26px;
+    height: 26px;
+
+    border-left: 2px solid rgba(255, 215, 0, 0.7);
+    border-bottom: 2px solid rgba(255, 215, 0, 0.7);
+}
+
+/* ============================= */
+/* AVATAR */
+/* ============================= */
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 8px auto 26px;
+    display: block;
+
+    border: 3.5px solid rgba(255, 200, 120, 0.85);
+    
+        box-shadow:
+    0 0 18px rgba(255, 215, 130, 0.35);
+
+}
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.team-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #ffd76a;
+    margin-bottom: 20px;
+    letter-spacing: 0.6px;
+}
+
+/* ============================= */
+/* ROLE BADGE (JUDGE) */
+/* ============================= */
+
+.role-badge {
+    display: inline-block;
+    padding: 7px 22px;
+    margin-bottom: 22px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #ffd76a;
+    border: 1.4px solid rgba(30, 0, 255, 0.85);
+    border-radius: 22px;
+
+    background: rgba(255, 215, 0, 0.12);
+    box-shadow: 0 0 14px rgba(255, 215, 0, 0.5);
+}
+
+/* ============================= */
+/* SOCIAL ICONS */
+/* ============================= */
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.linkedin,
+.instagram {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 215, 0, 0.8);
+    color: #ffd76a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    background: rgba(231, 21, 161, 0.08);
+
+    box-shadow:
+        0 0 18px rgba(255, 215, 0, 0.45);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    margin-top: 10px;
+}
+
+.linkedin:hover,
+.instagram:hover {
+    transform: scale(1.25);
+    box-shadow:
+        0 0 30px rgb(219, 16, 16);
+}
+
+/* ============================= */
+/* PHONE NUMBER STYLE */
+/* ============================= */
+
+.phone {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #ffd966;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 217, 102, 0.45);
+}
+
+.phone a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.phone a:hover {
+    text-shadow: 0 0 16px rgba(255, 217, 102, 0.9);
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+/* * Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .team-section {
+        padding: 50px 12px;
+        max-width: 100%;
+    }
+
+    .team-heading-wrapper {
+        margin-bottom: 60px;
+        margin-top: -40px;
+    }
+
+    .team-ghost {
+        font-size: 3.5rem;
+        top: 15%;
+    }
+
+    .team-main-title {
+        font-size: 1.8rem;
+    }
+
+    .role-heading {
+        font-size: 1.8rem;
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
+
+    .role-heading2 {
+        font-size: 1.8rem;
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
+
+    .team-grid,
+    .team-grid-2 {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 30px;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 220px;
+        padding: 30px 18px 24px;
+    }
+
+    .team-card-content {
+        text-align: center;
+    }
+
+    .team-card-name {
+        font-size: 1rem;
+    }
+
+    .team-card-role {
+        font-size: 0.8rem;
+    }
+
+    .socials-group {
+        gap: 8px;
+    }
+
+    .team-card a {
+        font-size: 0.9rem;
+    }
+}

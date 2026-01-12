@@ -1,0 +1,393 @@
+:root {
+  --neon: #00fff7;
+  --bg-dark: #05010a;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  backdrop-filter: none;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  overflow: visible;
+}
+
+/* ================= BRAND ================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.brand-logo {
+  height: 44px;
+}
+
+.logo-text {
+  color: #cfd8dc;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 18px rgba(0, 255, 247, 0.8);
+}
+
+/* ================= CENTER LINKS ================= */
+
+.links.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.links span {
+  color: #cfd8dc;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.links span:hover,
+.links span.active {
+  color: var(--neon);
+}
+
+/* ================= SLIDING INDICATOR ================= */
+
+.nav-indicator {
+  position: absolute;
+  bottom: -10px;
+  height: 3px;
+  background: var(--neon);
+  box-shadow: 0 0 14px var(--neon);
+  transition: 0.3s ease;
+}
+
+/* ================= 🔥 REGISTER RIBBON ================= */
+
+.register-ribbon {
+  position: absolute;
+  right: 32px;
+  top: 0;
+
+  height: 250px;
+  min-width: 80px;
+  padding: 0 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'transformers', sans-serif;
+  font-weight: 300;
+  font-size: 1px;
+
+  background: linear-gradient(
+    to bottom,
+    #df3d3d 0%,
+    #df3d3d 50%,
+    #df3d3d 100%
+  );
+
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  clip-path: polygon(
+  0% 0%,     /* top-left */
+  100% 0%,   /* top-right */
+
+  100% 68%,  /* right side */
+  75% 82%,   /* inward slope right */
+
+  50% 100%,  /* sharp bottom point */
+
+  25% 82%,   /* inward slope left */
+  0% 68%     /* left side */
+);
+
+
+  box-shadow:
+    inset 0 -6px 8px rgba(0,0,0,0.18),
+    inset 0 4px 6px rgba(0,0,0,0.15),
+    0 10px 26px rgba(0,0,0,0.45);
+
+  z-index: 2000;
+
+  /* 🎯 ANIMATION SETUP */
+  transform-origin: top center;
+  animation:
+    ribbon-sway 7s ease-in-out infinite,
+    ribbon-breathe 6s ease-in-out infinite;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ================= STITCH ================= */
+
+.register-ribbon::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 18px;
+  bottom: 18px;
+
+  border-top: 2px dashed rgba(0,0,0,0.35);
+  border-bottom: 2px dashed rgba(0,0,0,0.35);
+  pointer-events: none;
+}
+
+/* ================= FOLD SHADOW ================= */
+
+.register-ribbon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.12),
+    transparent 40%,
+    rgba(0,0,0,0.25)
+  );
+  pointer-events: none;
+}
+
+/* ================= HOVER ================= */
+
+.register-ribbon:hover {
+  animation-play-state: paused;
+  transform: translateY(3px) scale(1.02);
+  box-shadow:
+    inset 0 -8px 10px rgba(0,0,0,0.3),
+    0 14px 36px rgba(0,0,0,0.6);
+}
+
+
+/* ================= REGISTER NOW – PREMIUM FLOATING PILL ================= */
+
+.register-pill {
+  position: absolute;
+  right: 32px;
+  top: 55%;
+
+  /* Base position */
+  transform: translateY(-50%);
+
+  padding: 14px 36px;
+  border-radius: 999px;
+
+  font-family: 'TransformersMovie', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    to bottom,
+    #ff4d4d 0%,
+    #e63939 55%,
+    #c92f2f 100%
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.35),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.4),
+    0 8px 22px rgba(0, 0, 0, 0.55);
+
+  cursor: pointer;
+  z-index: 1500;
+
+  /* 🎈 ALWAYS FLOATING */
+  animation: float-air 3.6s ease-in-out infinite;
+
+  transition:
+    filter 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ================= HOVER ================= */
+
+.register-pill:hover {
+  filter: brightness(1.12);
+  box-shadow:
+    inset 0 3px 4px rgba(255, 255, 255, 0.45),
+    inset 0 -6px 8px rgba(0, 0, 0, 0.45),
+    0 14px 36px rgba(255, 77, 77, 0.75);
+}
+
+/* ================= ACTIVE ================= */
+
+.register-pill:active {
+  animation-play-state: paused;
+  transform: translateY(-50%) scale(0.96);
+}
+
+/* ================= FLOAT KEYFRAMES ================= */
+
+@keyframes float-air {
+  0% {
+    transform: translateY(-50%) translateY(0);
+  }
+  50% {
+    transform: translateY(-50%) translateY(-7px);
+  }
+  100% {
+    transform: translateY(-50%) translateY(0);
+  }
+}
+
+/* ================= REDUCED MOTION SAFETY ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .register-pill {
+    animation: none;
+  }
+}
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 30px;
+    height: 60px;
+  }
+
+  .brand-logo {
+    height: 36px;
+  }
+
+  .links.center {
+    gap: 18px;
+  }
+
+  .links span {
+    font-size: 0.9rem;
+  }
+
+  .register-ribbon {
+    right: 20px;
+    height: 200px;
+    min-width: 70px;
+  }
+
+  .register-pill {
+    right: 20px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: 55px;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    height: 32px;
+  }
+
+  .links.center {
+    position: static;
+    transform: none;
+    display: none;
+    gap: 0;
+  }
+
+  .register-ribbon {
+    display: none;
+  }
+
+  .register-pill {
+    right: 15px;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    height: 45px;
+    width: auto;
+  }
+
+  .logo-text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 15px;
+    height: 50px;
+  }
+
+  .brand-logo {
+    height: 28px;
+  }
+
+  .register-pill {
+    right: 10px;
+    padding: 8px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+  }
+
+  .logo-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* ================= 🎞️ KEYFRAMES ================= */
+
+/* Gentle left-right fabric sway */
+@keyframes ribbon-sway {
+  0%   { transform: translateX(0) rotate(0deg); }
+  25%  { transform: translateX(-1.5px) rotate(-0.35deg); }
+  50%  { transform: translateX(0) rotate(0deg); }
+  75%  { transform: translateX(1.5px) rotate(0.35deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+/* Soft breathing depth */
+@keyframes ribbon-breathe {
+  0%, 100% {
+    box-shadow:
+      inset 0 -6px 8px rgba(0,0,0,0.18),
+      inset 0 4px 6px rgba(0,0,0,0.15),
+      0 10px 26px rgba(0,0,0,0.45);
+  }
+  50% {
+    box-shadow:
+      inset 0 -8px 10px rgba(0,0,0,0.24),
+      inset 0 6px 8px rgba(0,0,0,0.2),
+      0 14px 34px rgba(0,0,0,0.55);
+  }
+}
+
+/* ================= REDUCED MOTION SAFETY ================= */
+
+

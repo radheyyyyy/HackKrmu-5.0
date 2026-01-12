@@ -1,0 +1,9 @@
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #00fff7;
+    box-shadow: 0 0 10px #00fff7;
+    z-index: 9999;
+}

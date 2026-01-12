@@ -1,0 +1,193 @@
+/* PAGE */
+.timeline-page {
+    min-height: 120vh;
+    padding: 20px 8% 120px;
+    color: white;
+    margin-bottom: -70px;
+    margin-top: -20px;
+}
+
+/* TITLE */
+.timeline-title {
+    color: white;
+    font-weight: 800;
+    font-size: 6rem;
+    font-family: 'TransformersMovie', sans-serif;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    letter-spacing: -0.025em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+/* ================= TIMELINE HEADING ================= */
+
+.timeline-heading {
+    position: relative;
+    text-align: center;
+    margin-bottom: 80px;
+    padding-top: 20px;
+}
+
+/* Ghost background text */
+.timeline-ghost {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.10);
+    filter: blur(1px);
+
+    font-family: 'TransformersMovie', sans-serif;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+
+    animation: ghostFloat 20s ease-in-out infinite;
+}
+
+/* Foreground title */
+.timeline-main-title {
+    position: relative;
+    z-index: 2;
+}
+
+/* BUTTONS */
+.timeline-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 60px;
+}
+
+.timeline-tabs button {
+    font-family: 'transformersmovie', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: 10px 26px;
+    border-radius: 30px;
+    border: 1px solid #666;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.timeline-tabs button:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+    background-color: #ffffff;
+}
+
+.timeline-tabs .active {
+    background: white;
+    color: black;
+}
+
+/* DAY TITLE */
+.timeline-day {
+    font-family: 'transformersmovie', sans-serif;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 80px;
+    color: #ffffff;
+    text-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+/* WRAPPER */
+.timeline-wrapper {
+    font-family: 'transformersmovie', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 120px;
+    margin-bottom: -150px;
+}
+
+/* LINES */
+.line-base {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 90%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-50%);
+}
+
+.line-fill {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 0%;
+    background: linear-gradient(to bottom,
+            #ff8c00,
+            #ff0077);
+    box-shadow: 0 0 25px rgba(255, 120, 0, 0.8);
+    transform: translateX(-50%);
+    transition: height 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* EVENTS */
+.event {
+    position: relative;
+    width: 50%;
+    padding: 30px 40px;
+}
+
+.event.left {
+    left: 0;
+    text-align: right;
+}
+
+.event.right {
+    left: 50%;
+    text-align: left;
+}
+
+/* DOT */
+.dot {
+    position: absolute;
+    top: 38px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ff8c00;
+    box-shadow: 0 0 18px rgba(255, 140, 0, 0.9);
+}
+
+.event.left .dot {
+    right: -7px;
+}
+
+.event.right .dot {
+    left: -7px;
+}
+
+/* TEXT */
+.time {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    display: block;
+}
+
+.label {
+    font-size: 1.25rem;
+}
+
+/* MOBILE */
+

@@ -1,0 +1,161 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* SCROLL SNAP (APPLE-LIKE) */
+/* ============================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+/* ============================= */
+/* BODY – HACK KRMU THEME */
+/* ============================= */
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', monospace;
+  color: white;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at top, rgba(0, 255, 247, 0.08), transparent 45%),
+    radial-gradient(circle at bottom, rgba(180, 0, 255, 0.08), transparent 45%),
+    linear-gradient(to bottom, #05010a, #020014);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================= */
+/* SCANLINE / DIGITAL NOISE */
+/* ============================= */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image: repeating-linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 3px);
+
+  opacity: 0.15;
+  z-index: 999;
+}
+
+/* ============================= */
+/* PAGE SECTIONS */
+/* ============================= */
+
+.page-section {
+  scroll-snap-align: start;
+}
+
+.section-title {
+    font-size: 3.4rem;
+    margin-bottom: 120px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 18px rgba(0, 255, 247, 0.8);
+}
+
+html, body {
+  max-width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+/* ================= CUSTOM CURSOR ================= */
+
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+
+    background: url("./assets/cursor/cursor.png") center/contain no-repeat;
+
+    /* ✅ WHITE by default */
+    filter: invert(1);
+
+    pointer-events: none;
+    z-index: 9999;
+
+    transform: translate(-50%, -50%);
+    transition:
+        width 0.2s ease,
+        height 0.2s ease,
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+/* Hide default cursor */
+body {
+    cursor: none;
+}
+
+/* Magnetic hover (size only) */
+#custom-cursor.magnetic {
+    width: 64px;
+    height: 64px;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* 🔥 BLACK cursor on buttons & links */
+#custom-cursor.dark {
+    filter: invert(0); /* BLACK */
+}
+
+/* ===================================================== */
+/* ================= MOBILE / TOUCH DEVICES ============ */
+/* ===================================================== */
+
+/* 👉 Explicitly disable custom cursor on touch */
+@media (hover: none) and (pointer: coarse) {
+
+  #custom-cursor {
+    display: none !important;
+  }
+
+  body,
+  *,
+  *::before,
+  *::after,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  iframe {
+    cursor: auto !important;
+  }
+}
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+

@@ -1,0 +1,58 @@
+/* ================================================= */
+/* TRUE JS GLITCH (VIDEO-FRAME STYLE) */
+/* ================================================= */
+
+.js-glitch {
+    position: relative;
+    display: inline-block;
+
+    font-family: 'Orbitron', monospace;
+    margin-left: '50px';
+    font-style: italic;
+    font-size: 5rem;
+    letter-spacing: 4px;
+
+    margin-top: 5px;
+
+    color: white;
+    text-shadow: none;
+}
+
+/* DUPLICATE CHANNELS */
+.js-glitch::before,
+.js-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* MAGENTA */
+.js-glitch::before {
+    color: #ff00ff;
+}
+
+/* CYAN */
+.js-glitch::after {
+    color: #00fff7;
+}
+
+/* ACTIVE GLITCH STATE */
+.js-glitch.glitch-active {
+    transform: translateX(var(--tx-main, 0)) skewX(var(--skew, 0deg));
+}
+
+/* MAGENTA STRIPS */
+.js-glitch.glitch-active::before {
+    opacity: 1;
+    clip-path: var(--clip-magenta);
+    transform: translateX(8px);
+}
+
+/* CYAN STRIPS */
+.js-glitch.glitch-active::after {
+    opacity: 1;
+    clip-path: var(--clip-cyan);
+    transform: translateX(-8px);
+}

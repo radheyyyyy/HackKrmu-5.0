@@ -1,0 +1,540 @@
+/* ================================================= */
+/* PRIZES PAGE */
+/* ================================================= */
+
+.prizes-page {
+    min-height: 100vh;
+    padding: 150px 20px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: -50px;
+}
+
+/* ================================================= */
+/*                       TITLE */
+/* ================================================= */
+
+/* ================= PRIZES HEADING ================= */
+
+.prizes-heading-wrapper {
+    position: relative;
+    text-align: center;
+    margin-bottom: 140px;
+    margin-top: -130px; /* keeps your layout exactly */
+}
+
+/* Ghost text */
+.prizes-ghost {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-display: block;
+
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, 0.10);
+    filter: blur(1px);
+
+    font-family: 'TransformersMovie', sans-serif;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+
+    animation: ghostFloat 20s ease-in-out infinite;
+}
+
+/* Foreground title */
+.prizes-main-title {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================================================= */
+/* PODIUM */
+/* ================================================= */
+
+.podium-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 140px;
+}
+
+/* COLUMN */
+.podium-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* ================================================= */
+/* PRIZE CARD */
+/* ================================================= */
+
+.prize-card {
+    width: 260px;
+    padding: 38px 24px;
+    background: rgba(0, 0, 0, 0.96);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+/* FLOATING MEDAL */
+.medal {
+    font-size: 3rem;                 /* Bigger & premium */
+    margin-bottom: 12px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Color tuning per medal */
+.prize-card.first .medal {
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9));
+}
+
+.prize-card.second .medal {
+    filter: drop-shadow(0 0 10px rgba(180, 220, 255, 0.9));
+}
+
+.prize-card.third .medal {
+    filter: drop-shadow(0 0 10px rgba(255, 120, 120, 0.9));
+}
+
+
+/* AMOUNT */
+.prize-amount {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+/* TITLE */
+.prize-title {
+
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* ================================================= */
+/* FIRST (CHAMPION) */
+/* ================================================= */
+
+.prize-card.first {
+    border: 2px solid #ffd700;
+    box-shadow:
+        0 0 40px rgba(255, 215, 0, 0.6),
+        0 0 120px rgba(255, 215, 0, 0.35);
+    animation: championPulse 3.5s ease-in-out infinite;
+}
+
+.prize-card.first .prize-amount {
+    color: #ffd700;
+}
+
+/* ================================================= */
+/* SECOND */
+/* ================================================= */
+
+.prize-card.second {
+    border: 2px solid #00bfff;
+    box-shadow:
+        0 0 35px rgba(0, 191, 255, 0.6),
+        0 0 90px rgba(0, 191, 255, 0.3);
+}
+
+.prize-card.second .prize-amount {
+    color: #00bfff;
+}
+
+/* ================================================= */
+/* THIRD */
+/* ================================================= */
+
+.prize-card.third {
+    border: 2px solid #ff5a5a;
+    box-shadow:
+        0 0 35px rgba(255, 90, 90, 0.6),
+        0 0 90px rgba(255, 90, 90, 0.3);
+}
+
+.prize-card.third .prize-amount {
+    color: #ff5a5a;
+}
+
+/* ================================================= */
+/* PODIUM BASE */
+/* ================================================= */
+
+.podium-base {
+    width: 260px;
+    margin-top: 16px;
+    border-radius: 0 0 22px 22px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* HEIGHTS */
+.podium-column.first .podium-base {
+    height: 200px;
+}
+
+.podium-column.second .podium-base {
+    height: 130px;
+}
+
+.podium-column.third .podium-base {
+    height: 100px;
+}
+
+/* BASE GRADIENT */
+.podium-base::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.08),
+            rgba(0, 0, 0, 0.95));
+}
+
+/* LIGHT SPILL */
+.podium-base::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    filter: blur(24px);
+}
+
+/* COLORS */
+.podium-column.first .podium-base::after {
+    background: rgba(255, 215, 0, 0.45);
+}
+
+.podium-column.second .podium-base::after {
+    background: rgba(0, 191, 255, 0.35);
+}
+
+.podium-column.third .podium-base::after {
+    background: rgba(255, 90, 90, 0.35);
+}
+
+/* ================================================= */
+/* TRACK PRIZES */
+/* ================================================= */
+
+.track-prizes {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.gift {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.track-amount {
+    font-size: 1.8rem;
+    color: #00fff7;
+    margin-bottom: 6px;
+}
+
+.track-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ================================================= */
+/* ANIMATIONS */
+/* ================================================= */
+
+@keyframes float {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes championPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 40px rgba(255, 215, 0, 0.6),
+            0 0 120px rgba(255, 215, 0, 0.35);
+    }
+
+    50% {
+        box-shadow:
+            0 0 60px rgba(255, 215, 0, 0.9),
+            0 0 160px rgba(255, 215, 0, 0.55);
+    }
+}
+
+/* ============================= */
+/* TOTAL PRIZE POOL */
+/* ============================= */
+
+.prize-pool {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.prize-pool-line {
+    width: 320px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 255, 247, 0.8),
+        transparent
+    );
+}
+
+.prize-pool-text {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-family: "Orbitron", monospace;
+    text-align: center;
+
+    text-shadow:
+        0 0 10px rgba(0, 255, 247, 0.7),
+        0 0 20px rgba(0, 255, 247, 0.4);
+}
+
+.prize-pool-text span {
+    color: #00fff7;
+}
+
+.prize-pool-sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ================= SCROLLING PRIZE POOL ================= */
+
+.scrolling-prize {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #00fff7;
+
+    text-shadow:
+        0 0 12px rgba(0, 255, 247, 0.9),
+        0 0 30px rgba(0, 255, 247, 0.6),
+        0 0 70px rgba(0, 255, 247, 0.35);
+
+    animation: prizePulse 2.4s ease-in-out infinite;
+}
+
+/* shimmer scan */
+/* .scrolling-prize::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255,255,255,0.55),
+        transparent 70%
+    );
+    opacity: 0.35;
+    animation: prizeScan 3s ease-in-out infinite;
+}
+
+@keyframes prizeScan {
+    0% { transform: translateX(-120%); }
+    60% { transform: translateX(120%); }
+    100% { transform: translateX(120%); }
+} */
+
+@keyframes prizePulse {
+    0%,100% {
+        text-shadow:
+            0 0 12px rgba(0, 255, 247, 0.8),
+            0 0 30px rgba(0, 255, 247, 0.5);
+    }
+    50% {
+        text-shadow:
+            0 0 20px rgba(0, 255, 247, 1),
+            0 0 50px rgba(0, 255, 247, 0.85),
+            0 0 100px rgba(0, 255, 247, 0.6);
+    }
+}
+
+/* ================================================= */
+/* MOBILE */
+/* ================================================= */
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+/* * Mobile devices (max-width: 768px) */ 
+@media (max-width: 768px) {
+    .prizes-page {
+        padding: 100px 12px;
+        margin-bottom: -30px;
+    }
+
+    .prizes-heading-wrapper {
+        margin-bottom: 70px;
+        margin-top: -80px;
+    }
+
+    .prizes-ghost {
+        font-size: 3.5rem;
+        top: 15%;
+    }
+
+    .prizes-main-title {
+        font-size: 1.8rem;
+    }
+
+    .podium-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .podium-column {
+        width: 100%;
+        align-items: center;
+    }
+
+    .prize-card {
+        width: 200px;
+        padding: 28px 18px;
+    }
+
+    .medal {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .prize-amount {
+        font-size: 1.8rem;
+        margin: 8px 0;
+    }
+
+    .prize-title {
+        font-size: 0.85rem;
+        opacity: 0.9;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .prizes-page {
+        padding: 80px 8px;
+        margin-bottom: -20px;
+    }
+
+    .prizes-heading-wrapper {
+        margin-bottom: 50px;
+        margin-top: -60px;
+    }
+
+    .prizes-ghost {
+        font-size: 2rem;
+    }
+
+    .prizes-main-title {
+        font-size: 1.4rem;
+    }
+
+    .podium-wrapper {
+        gap: 20px;
+    }
+
+    .prize-card {
+        width: 100%;
+        max-width: 170px;
+        padding: 24px 14px;
+    }
+
+    .medal {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    .prize-amount {
+        font-size: 1.4rem;
+        margin: 6px 0;
+    }
+
+    .prize-title {
+        font-size: 0.8rem;
+    }
+
+    .prize-card.first {
+        border: 1.5px solid #ffd700;
+    }
+
+    .prize-card.second {
+        border: 1.5px solid #00bfff;
+    }
+
+    .prize-card.third {
+        border: 1.5px solid #ff6b6b;
+    }
+}
+@media (max-width: 1024px) {
+    .prizes-page {
+        padding: 120px 15px;
+    }
+
+    .prizes-heading-wrapper {
+        margin-bottom: 100px;
+        margin-top: -100px;
+    }
+
+    .prizes-ghost {
+        font-size: 5rem;
+    }
+
+    .prizes-main-title {
+        font-size: 2.2rem;
+    }
+
+    .podium-wrapper {
+        gap: 80px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .podium-column {
+        flex: 0 0 auto;
+    }
+
+    .prize-card {
+        width: 220px;
+        padding: 32px 20px;
+    }
+
+    .medal {
+        font-size: 2.5rem;
+    }
+
+    .prize-amount {
+        font-size: 2rem;
+    }
+
+    .prize-title {
+        font-size: 0.9rem;
+    }
+}
