@@ -56,3 +56,42 @@
     clip-path: var(--clip-cyan);
     transform: translateX(-8px);
 }
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .js-glitch {
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .js-glitch {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .js-glitch.glitch-active::before {
+        transform: translateX(5px);
+    }
+
+    .js-glitch.glitch-active::after {
+        transform: translateX(-5px);
+    }
+}
+
+@media (max-width: 480px) {
+    .js-glitch {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin-top: 3px;
+    }
+
+    .js-glitch.glitch-active::before {
+        transform: translateX(3px);
+    }
+
+    .js-glitch.glitch-active::after {
+        transform: translateX(-3px);
+    }
+}

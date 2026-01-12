@@ -209,5 +209,162 @@
 
 
 /* ================= RESPONSIVE ================= */
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 20px 8% 18px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 24px;
+    }
+
+    .brand-title {
+        font-size: 1.1rem;
+    }
+
+    .brand-sub {
+        font-size: 0.75rem;
+        max-width: 220px;
+    }
+
+    .brand-socials a {
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+        margin-left: 20px;
+    }
+
+    .footer-col h3 {
+        font-size: 1rem;
+    }
+
+    .footer-col p,
+    .single-link {
+        font-size: 0.75rem;
+    }
+
+    .map-wrapper {
+        height: 90px;
+    }
+
+    .footer-bottom {
+        font-size: 0.65rem;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 6% 15px;
+        min-height: 220px;
+        margin-top: -50px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .brand-stack {
+        grid-column: 1 / -1;
+    }
+
+    .brand-title {
+        font-size: 1rem;
+    }
+
+    .brand-sub {
+        font-size: 0.7rem;
+        max-width: 200px;
+        margin-top: 12px;
+    }
+
+    .social-label {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 0.7rem;
+    }
+
+    .brand-socials a {
+        width: 24px;
+        height: 24px;
+        font-size: 0.65rem;
+        margin-left: 15px;
+    }
+
+    .footer-col h3 {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .footer-col p,
+    .single-link {
+        font-size: 0.7rem;
+        line-height: 1.35;
+    }
+
+    .map-wrapper {
+        height: 80px;
+    }
+
+    .footer-bottom {
+        font-size: 0.6rem;
+        margin-top: 10px;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 12px 4% 12px;
+        min-height: 180px;
+        margin-top: -40px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .brand-title {
+        font-size: 0.9rem;
+    }
+
+    .brand-sub {
+        font-size: 0.65rem;
+        margin-top: 10px;
+    }
+
+    .social-label {
+        font-size: 0.65rem;
+        margin-bottom: 8px;
+    }
+
+    .brand-socials a {
+        width: 22px;
+        height: 22px;
+        font-size: 0.6rem;
+        margin-left: 12px;
+    }
+
+    .footer-col h3 {
+        font-size: 0.8rem;
+    }
+
+    .footer-col p,
+    .single-link {
+        font-size: 0.65rem;
+    }
+
+    .map-wrapper {
+        height: 70px;
+    }
+
+    .footer-bottom {
+        font-size: 0.55rem;
+    }
+}
 
 

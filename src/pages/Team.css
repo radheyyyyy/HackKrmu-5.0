@@ -273,74 +273,140 @@
 .phone a:hover {
     text-shadow: 0 0 16px rgba(255, 217, 102, 0.9);
 }
-
-
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
 
-/* * Mobile devices (max-width: 768px) */
+/* TABLET (768px and below) */
 @media (max-width: 768px) {
     .team-section {
-        padding: 50px 12px;
-        max-width: 100%;
+        padding: 60px 16px;
+    }
+
+    .team-heading-wrapper {
+        margin-bottom: 80px;
+        margin-top: -50px;
+    }
+
+    .team-ghost {
+        font-size: 4rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .role-heading,
+    .role-heading2 {
+        font-size: 2rem !important;
+        margin-top: 50px !important;
+        margin-bottom: 50px;
+    }
+
+    .team-grid,
+    .team-grid-2 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+    }
+
+    .team-card {
+        width: 240px;
+        padding: 32px 20px 28px;
+    }
+
+    .team-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-card p {
+        font-size: 0.9rem;
+    }
+
+    .team-card img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* PHONE (480px and below) */
+@media (max-width: 480px) {
+    .team-section {
+        padding: 40px 12px;
     }
 
     .team-heading-wrapper {
         margin-bottom: 60px;
-        margin-top: -40px;
+        margin-top: -30px;
     }
 
     .team-ghost {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
         top: 15%;
     }
 
-    .team-main-title {
-        font-size: 1.8rem;
+    .hero-title {
+        font-size: 1.5rem;
     }
 
-    .role-heading {
-        font-size: 1.8rem;
-        margin-top: 40px;
-        margin-bottom: 35px;
-    }
-
+    .role-heading,
     .role-heading2 {
-        font-size: 1.8rem;
-        margin-top: 40px;
+        font-size: 1.5rem !important;
+        margin-top: 40px !important;
         margin-bottom: 35px;
     }
 
     .team-grid,
     .team-grid-2 {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: 1fr;
         gap: 30px;
+        justify-items: center;
     }
 
     .team-card {
         width: 100%;
-        max-width: 220px;
-        padding: 30px 18px 24px;
+        max-width: 280px;
+        padding: 24px 16px 20px;
     }
 
-    .team-card-content {
-        text-align: center;
+    .team-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
     }
 
-    .team-card-name {
-        font-size: 1rem;
+    .team-card p {
+        font-size: 0.85rem;
+        margin-bottom: 16px;
     }
 
-    .team-card-role {
-        font-size: 0.8rem;
+    .team-card img {
+        width: 100px;
+        height: 100px;
+        margin: 6px auto 18px;
     }
 
-    .socials-group {
-        gap: 8px;
+    .role-badge {
+        padding: 6px 16px;
+        font-size: 0.7rem;
+        margin-bottom: 16px;
     }
 
-    .team-card a {
+    .socials {
+        gap: 14px;
+        margin-top: 6px;
+    }
+
+    .linkedin,
+    .instagram {
+        width: 36px;
+        height: 36px;
         font-size: 0.9rem;
+        border: 1.2px solid rgba(255, 215, 0, 0.8);
+    }
+
+    .phone {
+        font-size: 0.8rem;
+        margin-top: 4px;
     }
 }

@@ -422,3 +422,209 @@ html {
 /* RESPONSIVE */
 /* ================================================= */
 
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .page-section {
+        padding: 50px 8% 70px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .prize-grid {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        gap: 24px;
+        margin: 30px 0;
+    }
+
+    .prize-card {
+        padding: 24px 16px;
+    }
+
+    .prize-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .prize-card p {
+        font-size: 1.5rem;
+    }
+
+    .register-btn {
+        padding: 12px 36px;
+        font-size: 1.8rem;
+    }
+
+    .insta-btn {
+        width: 60px;
+        height: 60px;
+        margin-left: 30px;
+    }
+
+    .hero-cta {
+        transform: translateX(-20px);
+        gap: 16px;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .page-section {
+        padding: 40px 6% 60px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        gap: 4px;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        margin-top: 15px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .prize-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 25px 0;
+    }
+
+    .prize-card {
+        padding: 20px 14px;
+        width: 100%;
+    }
+
+    .prize-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .prize-card p {
+        font-size: 1.3rem;
+    }
+
+    .register-btn {
+        padding: 10px 30px;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .insta-btn {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    .insta-btn img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        transform: translateX(0);
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .tagline-below {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-top: 60px;
+        margin-bottom: -50px;
+    }
+
+    .timeline-section {
+        padding-left: 2% !important;
+        padding-right: 2% !important;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .page-section {
+        padding: 30px 4% 50px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        gap: 3px;
+    }
+
+    .tagline {
+        font-size: 0.75rem;
+        margin-top: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .prize-grid {
+        gap: 15px;
+    }
+
+    .prize-card {
+        padding: 16px 12px;
+    }
+
+    .prize-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .prize-card p {
+        font-size: 1.1rem;
+    }
+
+    .prize-note {
+        font-size: 0.8rem;
+    }
+
+    .register-btn {
+        padding: 8px 24px;
+        font-size: 1.2rem;
+    }
+
+    .insta-btn {
+        width: 45px;
+        height: 45px;
+        margin-left: 15px;
+    }
+
+    .hero-cta {
+        gap: 12px;
+    }
+
+    .tagline-below {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        margin-top: 50px;
+    }
+}
