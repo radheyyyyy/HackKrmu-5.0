@@ -173,5 +173,114 @@
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
+/* Tablets and smaller screens */
+@media (max-width: 1024px) {
+    .theme-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+    }
 
+    .theme-card {
+        width: 260px;
+        height: 150px;
+    }
+
+    .theme-face.front h3 {
+        font-size: 1rem;
+    }
+
+    .themes-heading {
+        margin-bottom: 30px;
+    }
+
+    .themes-ghost {
+        font-size: 5rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* Medium mobile devices */
+@media (max-width: 768px) {
+    .theme-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .theme-card {
+        width: 200px;
+        height: 120px;
+    }
+
+    .theme-face.front h3 {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .themes-heading {
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .themes-ghost {
+        font-size: 3.5rem;
+    }
+
+    .themes-page {
+        padding: 0px 0 30px;
+    }
+}
+
+/* Small mobile devices (phones) */
+@media (max-width: 480px) {
+    .theme-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .theme-card {
+        width: 140px;
+        height: 80px;
+        border: 1px solid rgba(0, 255, 247, 0.45);
+        box-shadow:
+            0 0 10px rgb(255, 255, 255),
+            inset 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+
+    .theme-face.front h3 {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .theme-card:hover {
+        transform: rotateX(6deg) rotateZ(-1deg);
+        box-shadow:
+            0 0 20px rgb(255, 255, 255),
+            0 0 50px rgba(255, 255, 255, 0.4);
+    }
+
+    .themes-heading {
+        margin-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .themes-ghost {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .themes-page {
+        padding: 0px 0 25px;
+        margin-bottom: -25px;
+    }
+}
+/* ============================= */
 

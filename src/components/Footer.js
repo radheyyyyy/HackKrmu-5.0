@@ -45,16 +45,15 @@ export default function Footer() {
                     <h3 style={{ marginLeft: "10px", marginBottom: "10px" }}>
                         Venue
                     </h3>
-                    <p style={{ marginLeft: "-30px", marginTop: "20px" }}>
+                    <p style={{ marginLeft: "10px",marginTop: "20px" }}>
                         K.R. Mangalam University<br />
                         Sohna Road, Gurugram<br />
                         Haryana – 122103
                     </p>
                 </div>
-
                 {/* LINKS + SOCIAL */}
                 <div className="footer-col">
-                    <h3 style={{ marginBottom: "15px", marginLeft: "35px" }}>
+                    <h3 style={{ marginLeft: "30px",marginTop: "20px" }}>
                         Links
                     </h3>
 
@@ -89,7 +88,7 @@ export default function Footer() {
 
                 {/* MAP */}
                 <div className="footer-col map">
-                    <h3 style={{ marginBottom: "10px", marginLeft: "80px" }}>
+                    <h3 style={{ marginBottom: "10px", marginLeft: "150px" }}>
                         Location
                     </h3>
 

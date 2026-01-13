@@ -175,57 +175,92 @@
 }
 
 /* ================= MOBILE SAFETY ================= */
-
-/* Tablets (768px - 1024px) */
-/* @media (max-width: 1024px) {
-    .divider-wrapper {
-        height: 44px;
-        margin: 35px 0;
+/* Tablets and smaller screens */
+@media (max-width: 1024px) {
+    .hex-wrap {
+        width: 160px;
+        height: 140px;
+        margin: 0 8px;
     }
 
-    .divider-line {
-        width: 75%;
+    .hex-row {
+        margin-bottom: -22px;
     }
 
-    .divider-text span {
-        font-size: 0.9rem;
-        letter-spacing: 3px;
+    .gallery-heading {
+        margin-bottom: 60px;
+    }
+
+    .gallery-ghost {
+        font-size: 5rem;
     }
 }
 
+/* Medium mobile devices */
 @media (max-width: 768px) {
-    .divider-wrapper {
-        height: 40px;
-        margin: 28px 0;
+    .hex-wrap {
+        width: 130px;
+        height: 115px;
+        margin: 0 6px;
     }
 
-    .divider-line {
-        width: 70%;
+    .hex-row {
+        margin-bottom: -18px;
     }
 
-    .divider-text span {
-        font-size: 0.7rem;
-        letter-spacing: 2px;
+    .gallery-heading {
+        margin-bottom: 50px;
+    }
+
+    .gallery-ghost {
+        font-size: 3.5rem;
+    }
+
+    .past-gallery {
+        padding: 20px 0 80px;
+        margin-bottom: -80px;
     }
 }
 
-/* Small mobile devices (max-width: 480px) */
-/*@media (max-width: 480px) {
-    .divider-wrapper {
-        height: 36px;
-        margin: 20px 0;
+/* Small mobile devices (phones) */
+@media (max-width: 480px) {
+    .hex-wrap {
+        width: 70px;
+        height: 62px;
+        margin: 0 3px;
     }
 
-    .divider-line {
-        width: 65%;
-        height: 2px;
+    .hex-row {
+        margin-bottom: -9px;
     }
 
-    .divider-text span {
-        font-size: 0.6rem;
-        letter-spacing: 1px;
+    .gallery-heading {
+        margin-bottom: 25px;
+        padding-top: 8px;
     }
-} */
 
+    .gallery-ghost {
+        font-size: 1.5rem;
+        top: 30%;
+    }
 
+    .past-gallery {
+        padding: 10px 0 50px;
+        margin-bottom: -50px;
+    }
+
+    .hex {
+        border: 1px solid rgba(0, 255, 247, 0.45);
+        box-shadow:
+            0 0 8px rgba(0, 255, 247, 0.2),
+            inset 0 0 6px rgba(0, 255, 247, 0.15);
+    }
+
+    .hex-wrap:hover .hex {
+        box-shadow:
+            0 0 16px rgba(0, 255, 247, 0.5),
+            0 0 32px rgba(0, 255, 247, 0.3);
+    }
+}
+/* ============================= */
 

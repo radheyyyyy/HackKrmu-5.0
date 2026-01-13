@@ -89,7 +89,7 @@ export default function About() {
                 {/* 🔒 FIXED TOP ROW (first 5) */}
 
                 <div className="partners-fixed">
-                
+
                     {[
                         {
                             logo: gdgnewdelhi,
@@ -109,7 +109,7 @@ export default function About() {
                         },
                         {
                             logo: tws,
-                            url: "https://www.threewaystudio.world"   
+                            url: "https://www.threewaystudio.world"
                         },
                         {
                             logo: interviewbuddy,
@@ -117,7 +117,7 @@ export default function About() {
                         },
                         {
                             logo: xyz,
-                            url: "https://xyz.com"             
+                            url: "https://xyz.com"
                         }
                     ].map((partner, i) => (
                         <a

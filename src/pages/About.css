@@ -37,17 +37,21 @@
 
 .about-ghost {
     position: absolute;
-    top: 30%;                 /* ✅ center vertically */
+    top: 30%;
+    /* ✅ center vertically */
     left: 49.9%;
     transform: translate(-50%, -50%);
     font-display: block;
 
-    font-size: 8rem; /* ✅ MUCH wider */
+    font-size: 8rem;
+    /* ✅ MUCH wider */
     font-weight: 800;
     letter-spacing: 1px;
 
-    color: rgba(255, 255, 255, 0.10);    /* ✅ softer */
-    filter: blur(1px);                    /* depth */
+    color: rgba(255, 255, 255, 0.10);
+    /* ✅ softer */
+    filter: blur(1px);
+    /* depth */
 
     font-family: 'TransformersMovie', sans-serif;
     white-space: nowrap;
@@ -73,15 +77,25 @@
 } */
 
 @keyframes focusPulse {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.1); }
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 /* ================= CONTENT ================= */
 
 .about-top {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr; /* text | image */
+    grid-template-columns: 1.1fr 0.9fr;
+    /* text | image */
     gap: 80px;
 
     max-width: 1200px;
@@ -117,7 +131,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;    
+    flex-shrink: 0;
 }
 
 .about-right img {
@@ -147,7 +161,8 @@
 /* Ghost text */
 .partners-ghost {
     position: absolute;
-    top: 1%;                 /* center vertically */
+    top: 1%;
+    /* center vertically */
     left: 50%;
     transform: translate(-50%, -50%);
     font-display: block;
@@ -195,7 +210,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     transition: transform 0.3s ease;
 }
 
@@ -210,7 +225,8 @@
 }
 
 .partners-fixed .partner-card img {
-    max-width: 165px !important;     /* ⬆ much larger logo */
+    max-width: 165px !important;
+    /* ⬆ much larger logo */
     max-height: 70px !important;
     width: auto;
     height: auto;
@@ -241,15 +257,17 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 20px 0;   /* ✅ THIS FIXES TOP CUTTING */
-    pointer-events: none;  /* prevents hover issues */
+    padding: 20px 0;
+    /* ✅ THIS FIXES TOP CUTTING */
+    pointer-events: none;
+    /* prevents hover issues */
 }
 
 .partners-marquee .partner-card {
     pointer-events: auto;
 }
 
-.partners-marquee .partner-card:hover ~ .marquee-track,
+.partners-marquee .partner-card:hover~.marquee-track,
 .partners-marquee:hover .marquee-track {
     animation-play-state: running;
 }
@@ -258,7 +276,8 @@
     display: flex;
     gap: 30px;
     width: max-content;
-    align-items: center;   /* ✅ keeps cards vertically centered */
+    align-items: center;
+    /* ✅ keeps cards vertically centered */
 }
 
 /* Left → Right */
@@ -273,13 +292,23 @@
 
 /* Smooth infinite motion */
 @keyframes marquee-left {
-    from { transform: translateX(-30%); }
-    to { transform: translateX(0%); }
+    from {
+        transform: translateX(-30%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
 @keyframes marquee-right {
-    from { transform: translateX(0%); }
-    to { transform: translateX(-30%); }
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-30%);
+    }
 }
 
 /* Hover pause (premium feel) */
@@ -290,27 +319,28 @@
 /* ================= FIXED PARTNERS – SMALLER CARDS ================= */
 
 .partners-fixed .partner-card {
-    width: 180px;      /* 🔥 controls card width */
-    height: 90px;      /* 🔥 controls card height */
+    width: 180px;
+    /* 🔥 controls card width */
+    height: 90px;
+    /* 🔥 controls card height */
 
     padding: 12px;
     border-radius: 16px;
 
-    background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #f5f5f5 100%
-    );
+    background: linear-gradient(180deg,
+            #ffffff 0%,
+            #f5f5f5 100%);
 
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 rgba(255,255,255,0.7);
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
-        margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .partners-fixed .partner-card img {
-    max-width: 110px;       /* ↓ smaller logo */
+    max-width: 110px;
+    /* ↓ smaller logo */
     max-height: 48px;
 }
 
@@ -354,7 +384,7 @@
 
 @media (max-width: 768px) {
     .about-page {
-        
+
         padding: 0px 5% 80px;
         margin-bottom: -30px;
     }
@@ -427,12 +457,39 @@
     .theme-ghost {
         font-size: 4rem;
     }
+
+    .partners-fixed {
+        flex-wrap: wrap;
+        /* next line allow */
+        justify-content: center;
+        gap: 12px;
+        animation: none;
+        /* marquee band */
+    }
+
+    .partners-fixed .partner-card {
+        width: 45%;
+        /* 2 cards per row */
+        height: 80px;
+        /* keep visible */
+        margin: 0;
+    }
+
+    .partners-fixed .partner-card img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
 }
+
+
 
 /* Small mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
     .about-page {
-        padding: 0px 5% 60px;
+        padding: 0px 5% 80px;
+
     }
 
     .hero-title {
@@ -451,17 +508,14 @@
     }
 
     .about-top {
-        max-width: 100%;
-        overflow: hidden;
+        padding: 0 10px;
     }
 
     .about-left p {
-        font-size: 0.8rem;
-        line-height: 1.5;
-        margin-bottom: 10px;
+        font-size: 0.95rem;
         word-wrap: break-word;
         overflow-wrap: break-word;
-        letter-spacing: 0px;
+        word-break: break-word;
     }
 
     .about-right img {
@@ -509,6 +563,7 @@
         overflow-x: hidden;
     }
 }
+
 /* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
     .about-page {
